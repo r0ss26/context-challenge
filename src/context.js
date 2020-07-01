@@ -15,7 +15,6 @@ export const themes = {
     }
 }
 
-
 const AppContext = React.createContext()
 
 export default AppContext;

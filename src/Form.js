@@ -6,7 +6,7 @@ const Form = () => {
     return (
         <>
             <ThemeInput />
-            <ThemeButton />
+            <ThemeButton text="Submit" />
         </>
     )
 }

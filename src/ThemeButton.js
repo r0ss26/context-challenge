@@ -1,9 +1,14 @@
 import React from 'react'
+import AppContext from './context';
 
 const ThemeButton = ({text}) => {
     // This button should use the current theme
     return (
-        <button>{text}</button>
+        <AppContext.Consumer >
+            {(context) => (
+                <button style={context.theme}>{text}</button>
+            ) }
+        </AppContext.Consumer>
     )
 }
 
