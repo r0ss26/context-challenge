@@ -2,15 +2,13 @@ import React, {useState} from 'react'
 import AppContext from './context'
 
 const ThemeInput = () => {
-    // This input should use the current theme
-    const [inputValue, setInputValue] = useState('')
     return (
         <AppContext.Consumer>
             {context => (
                 <input
                     type="text"
-                    value={inputValue}
-                    onChange={e => setInputValue(e.target.value)}
+                    value={context.inputValue}
+                    onChange={e => context.setInputValue(e.target.value)}
                     style={context.theme}
                 />
             )}

@@ -7,6 +7,7 @@ import ThemeTogglerButtom from './ThemeTogglerButton';
 const App = () => {
 
     const [theme, setTheme] = useState(themes.dark);
+    const [inputValue, setInputValue] = useState(''); 
     
     const themeToggler = () => {
         if (theme === themes.dark) {
@@ -19,7 +20,7 @@ const App = () => {
     }
 
     return (
-        <AppContext.Provider value={{theme, themeToggler}}>
+        <AppContext.Provider value={{theme, themeToggler, inputValue, setInputValue}}>
             <Form />
             <ThemeTogglerButtom />
         </AppContext.Provider>
